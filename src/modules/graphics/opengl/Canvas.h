@@ -30,7 +30,11 @@
 #include "common/math.h"
 #include "common/Matrix.h"
 #include "OpenGL.h"
-#include "GLee.h"
+#ifdef LOVE_GLES
+    #include <GLES2/gl2.h>
+#else
+    #include "GLee.h"
+#endif
 
 namespace love
 {

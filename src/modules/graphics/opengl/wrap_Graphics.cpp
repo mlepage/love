@@ -19,7 +19,11 @@
  **/
 
 #include "wrap_Graphics.h"
-#include "GLee.h"
+#ifdef LOVE_GLES
+    #include <GLES2/gl2.h>
+#else
+    #include "GLee.h"
+#endif
 #include "graphics/DrawQable.h"
 #include "image/ImageData.h"
 #include "font/Rasterizer.h"

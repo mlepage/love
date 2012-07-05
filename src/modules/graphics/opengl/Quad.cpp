@@ -22,7 +22,11 @@
 #include "common/Matrix.h"
 
 // GLee
-#include "GLee.h"
+#ifdef LOVE_GLES
+    #include <GLES2/gl2.h>
+#else
+    #include "GLee.h"
+#endif
 
 // STD
 #include <cstring> // For memcpy

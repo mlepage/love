@@ -19,7 +19,11 @@
  **/
 
 #include "PixelEffect.h"
-#include "GLee.h"
+#ifdef LOVE_GLES
+    #include <GLES2/gl2.h>
+#else
+    #include "GLee.h"
+#endif
 
 namespace
 {
